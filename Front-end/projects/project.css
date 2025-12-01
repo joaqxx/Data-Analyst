@@ -1,0 +1,36 @@
+    .back-btn { transition: all 0.3s ease; }
+    .back-btn:hover { transform: translateX(-4px); }
+    .card-light { background-color: #f5f5f5; border: 1px solid #e5e5e5; }
+    .card-light:hover { background-color: #f9f9f9; }
+    .accent-line { height: 3px; background: linear-gradient(to right, #333333, #333333, transparent); }
+    .question-number { 
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: rgba(72, 72, 72, 0.894);
+      font-weight: 600;
+      font-size: 12px;
+      margin-right: 8px;
+      color: #ffffff;
+    }
+    .answer-highlight {
+      border-left: 3px solid #ffffff;
+      padding-left: 16px;
+    }
+
+    .card {
+        background-color: #111111;
+        border: 1px solid #222222;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
+
+    .card:hover{
+        background-color: #212121;
+    }

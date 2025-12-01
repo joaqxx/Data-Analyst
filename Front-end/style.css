@@ -5,7 +5,7 @@
         }
 
         body {
-            background-color: #0a0a0a;
+            background-color: #000000;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
         }
@@ -244,20 +244,20 @@
             align-items: center;
             gap: 0.5rem;
             padding: 0.6rem 1.2rem;
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(59, 130, 246, 0.05) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.4);
+            background: linear-gradient(135deg, rgba(59, 59, 59, 0.1) 0%, rgba(71, 71, 71, 0.415) 100%);
+            border: 1px solid rgb(255, 255, 255);
             border-radius: 0.75rem;
             font-size: 0.875rem;
             font-weight: 600;
-            color: #3b82f6;
+            color: #fdfdfd;
             cursor: pointer;
             transition: all 0.3s ease;
             text-decoration: none;
         }
 
         .view-all-btn:hover {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(59, 130, 246, 0.1) 100%);
-            border-color: rgba(59, 130, 246, 0.6);
+            background: linear-gradient(135deg, rgba(36, 36, 36, 0.1) 0%, rgba(18, 18, 18, 0.415) 100%);
+            border-color: rgba(138, 138, 138, 0.6);
             transform: translateX(2px);
         }
 
@@ -299,5 +299,57 @@
             .top-bar-buttons {
                 width: 100%;
                 flex-wrap: wrap;
+            }
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(25, 25, 25, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 24px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 8px;
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            border: 2px solid rgba(0, 0, 0, 0.8);
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 3px;
+            top: 22px;
+            width: 2px;
+            height: calc(100% + 24px);
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), transparent);
+        }
+
+        .timeline-item:last-child .timeline-line {
+            display: none;
+        }
+
+        .fade-in-element {
+            animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
+        }
+
+        @keyframes fadeInUp {
+            from {
+            opacity: 0;
+            transform: translateY(10px);
+            }
+            to {
+            opacity: 1;
+            transform: translateY(0);
             }
         }

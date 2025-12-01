@@ -72,14 +72,63 @@
             });
         }
 
-        // Projects Modal - safe handlers
+        // Projects Modal - show only first N projects and populate modal when needed
         const viewAllBtn = document.getElementById('viewAllBtn');
         const projectsModal = document.getElementById('projectsModal');
         const closeProjectsModal = document.getElementById('closeProjectsModal');
+        const projectsGrid = document.querySelector('.projects-grid');
+        const projectCards = projectsGrid ? Array.from(projectsGrid.querySelectorAll('.project-card')) : [];
+
+        const MAX_VISIBLE = 4;
+
+        function updateProjectVisibility() {
+            if (!projectsGrid) return;
+            if (projectCards.length > MAX_VISIBLE) {
+                projectCards.forEach((card, idx) => {
+                    card.style.display = idx < MAX_VISIBLE ? '' : 'none';
+                });
+                if (viewAllBtn) viewAllBtn.style.display = '';
+            } else {
+                projectCards.forEach(card => card.style.display = '');
+                if (viewAllBtn) viewAllBtn.style.display = 'none';
+            }
+        }
+
+        function populateProjectsModal() {
+            if (!projectsModal) return;
+            const modalGrid = projectsModal.querySelector('.projects-modal-grid');
+            if (!modalGrid) return;
+            modalGrid.innerHTML = '';
+            projectCards.forEach((card, idx) => {
+                // Create a modal link that points to the project's dedicated page
+                const projectId = card.getAttribute('data-project-id') || (idx + 1);
+                const anchor = document.createElement('a');
+                anchor.href = `projects/project-${projectId}.html`;
+                anchor.className = 'card p-6 transition hover:scale-105 block';
+                // Clone inner contents so we preserve image/title/description
+                const inner = card.cloneNode(true).innerHTML;
+                anchor.innerHTML = inner;
+                // Ensure no duplicated fade-in classes
+                anchor.querySelectorAll('.fade-in-element').forEach(el => el.classList.remove('fade-in-element'));
+                modalGrid.appendChild(anchor);
+            });
+
+            // Attach click handlers to modal entries
+            modalGrid.querySelectorAll('a').forEach(a => {
+                a.addEventListener('click', function (e) {
+                    // Let the anchor navigate normally; close modal for better UX
+                    projectsModal.classList.remove('active');
+                });
+            });
+        }
+
+        // Initialize visibility
+        updateProjectVisibility();
 
         if (viewAllBtn && projectsModal) {
             viewAllBtn.addEventListener('click', (e) => {
                 e.preventDefault();
+                populateProjectsModal();
                 projectsModal.classList.add('active');
             });
         }
@@ -101,23 +150,28 @@
         // Note: download is handled by a native HTML anchor (<a href="Resume.pdf" download>) in index.html.
         // This avoids generating blob-based downloads in JS and lets the browser handle file retrieval.
 
-        // Project card click handlers
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('click', function() {
-                const projectId = this.getAttribute('data-project-id');
-                console.log("[v0] Clicked project:", projectId);
-                // Navigate to project detail page or open project info
-                // Example: window.location.href = `/project/${projectId}`;
+        // Project card click handlers (visible grid)
+        projectCards.forEach(card => {
+            // Ensure anchor cards link to the project page
+            const projectId = card.getAttribute('data-project-id');
+            const targetUrl = `projects/project-${projectId}.html`;
+            if (card.tagName && card.tagName.toLowerCase() === 'a') {
+                card.href = targetUrl;
+            }
+            card.addEventListener('click', function (e) {
+                // Allow default anchor navigation, but also handle non-anchor cards
+                if (card.tagName && card.tagName.toLowerCase() !== 'a') {
+                    window.location.href = targetUrl;
+                }
             });
         });
 
+        // If there are existing modal static cards, attach handlers too (fallback)
         if (projectsModal) {
             projectsModal.querySelectorAll('.card[data-project-id]').forEach(card => {
-                card.addEventListener('click', function() {
+                card.addEventListener('click', function () {
                     const projectId = this.getAttribute('data-project-id');
-                    console.log("[v0] Clicked project from modal:", projectId);
-                    // Navigate to project detail page
-                    // Example: window.location.href = `/project/${projectId}`;
+                    console.log('[v0] Clicked project from modal:', projectId);
                 });
             });
         }
