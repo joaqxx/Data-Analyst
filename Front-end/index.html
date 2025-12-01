@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joaquin Sebastian Macol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        />
+    <link
+        href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+        rel="stylesheet"
+        />
+    <link rel="icon" type="image/png" href="Images/web-logo.png" />
+
+
+
+</head>
+<body class="text-white">
+    <!-- Floating pill-shaped navbar -->
+    <!-- <nav class="px-8 py-4">
+        <div class="flex justify-between items-center gap-8">
+            <div class="hidden md:flex gap-8 text-sm text-gray-400">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#footer-section" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- Main Content -->
+    <main class="pt-12 px-6">
+        <div class="max-w-7xl mx-auto">
+            <!-- Top accent bar - Picture on left, name with checkmark, action buttons on right -->
+            <div class="card p-8 mb-8 fade-in-element" style="animation-delay: 0.05s;">
+                <div class="top-bar flex items-start justify-between gap-8">
+                    <!-- Left side: Profile picture and name/description -->
+                    <div class="top-bar-left flex items-start gap-6 flex-1">
+                        <div class="w-48 h-48 rounded-lg overflow-hidden flex-shrink-0">
+                            <img src="Images/joaqs.png" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+
+                        <div class="flex-1">
+                            <div class="flex items-center gap-2 mb-2">
+                                <h1 class="text-3xl md:text-3xl font-bold tracking-tight">
+                                    Joaquin Sebastian Macol
+                                </h1>
+                            <i class="fa-solid fa-circle-check text-blue-500"></i>
+                            </div>
+                            <p class="text-sm md:text-base text-gray-400 mb-4">
+                                Software Engineer | Data Analyst
+                            </p>
+                            <!-- GitHub and LinkedIn moved under description -->
+                            <div class="flex gap-2 flex-wrap">
+                            <!-- GitHub -->
+                            <a href="#" target="_blank"
+                                class="flex items-center gap-2 px-3 py-1.5 bg-black hover:bg-white text-white hover:text-black text-xs font-medium rounded-md transition">
+                                <i class="fa-brands fa-github text-white text-sm hover:text-black"></i>
+                                <span>GitHub</span>
+                            </a>
+
+                            <!-- LinkedIn -->
+                            <a href="#" target="_blank"
+                                class="flex items-center gap-2 px-3 py-1.5 bg-black hover:bg-white text-white hover:text-black text-xs font-medium rounded-md transition">
+                                <i class="fa-brands fa-linkedin text-blue-400 text-sm hover:text-black"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Right side: Download CV and Contact buttons -->
+                <div class="text-center">
+                <a href="Public/Resume.pdf" download>
+                    <button 
+                    class="px-4 py-2 mr-2 bg-black hover:bg-white text-white hover:text-black text-sm font-semibold rounded-lg transition whitespace-nowrap inline-block text-center">
+                    Download Resume
+                    </button>
+                                    </a>
+                    <button id="contactBtn" class="px-4 py-2 bg-white hover:black text-black hover:bg-black hover:text-white text-sm font-semibold rounded-lg transition whitespace-nowrap">
+                        Contact
+                    </button>
+                </div>
+                </div>
+            </div>
+
+            <!-- Main Grid Layout: Left column (2 cols) wider, Right column (3 cols) for Experience, Projects, My Journey -->
+            <div class="main-grid grid grid-cols-1 lg:grid-cols-5 gap-6 mb-8">
+                <!-- Left Column (2 cols) -->
+                <div class="lg:col-span-2 space-y-6">
+                    <!-- About Card -->
+                    <div class="card p-8 fade-in-element" style="animation-delay: 0.1s;" id="about">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-address-card"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">About</h2>
+                        </div>
+                        <div class="space-y-4 text-gray-400 text-sm leading-relaxed">
+                            <p>
+                                A dedicated and detail-oriented Information Technology professional with a strong academic foundation, graduating Magna Cum Laude from the Polytechnic University of the Philippines. Experienced in systems design, application development, and collaborative project management, with a proven ability to contribute effectively to both academic and industry projects.
+                            </p>
+                            <p>
+                                Demonstrates adaptability, critical thinking, and a strong commitment to continuous learning and improvement. Aims to leverage technical expertise and innovative thinking to solve real-world problems through technology, creating impactful and efficient digital solutions.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Educational Background Card -->
+                    <div class="card p-8 fade-in-element" style="animation-delay: 0.15s;">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">Education</h2>
+                        </div>
+                        <div class="space-y-6">
+                            <div>
+                                <p class="text-xs text-gray-500 font-medium mb-1">2021 - 2025</p>
+                                <h3 class="font-semibold text-white mb-1">Bachelor of Science in Information Technology</h3>
+                                <p class="text-sm text-gray-300">Polytechnic University of the Philippines</p>
+                                <p class="text-sm text-gray-300">Magna Cum Laude</p>
+                                <p class="text-xs text-gray-400 mt-2">GWA: 1.25/1.0</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Stack Card -->
+                    <div class="card p-8 fade-in-element" style="animation-delay: 0.2s;" id="skills">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">Tech Stack</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex flex-wrap gap-2">
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-html5 text-orange-500 text-sm"></i>
+                                <span class="text-xs font-medium">HTML</span>
+                                </div>
+
+                                <!-- CSS -->
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">                                
+                                    <i class="fa-brands fa-css3-alt text-blue-500 text-xl"></i>
+                                <span class="text-xs font-medium">CSS</span>
+                                </div>
+
+                                <!-- JavaScript -->
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">                                
+                                    <i class="fa-brands fa-js text-yellow-400 text-xl"></i>
+                                <span class="text-xs font-medium">JavaScript</span>
+                                </div>
+
+                                <!-- React -->
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-react text-cyan-400 text-xl"></i>
+                                <span class="text-xs font-medium">React</span>
+                                </div>
+
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-node-js text-green-500 text-xl"></i>
+                                <span class="text-xs font-medium">Node.js</span>
+                                </div>
+
+                                <!-- PHP -->
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-php text-indigo-400 text-xl"></i>
+                                <span class="text-xs font-medium">PHP</span>
+                                </div>
+
+                                <!-- Python -->
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-python text-yellow-400 text-xl"></i>
+                                <span class="text-xs font-medium">Python</span>
+                                </div>
+
+                                <!-- Java -->
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-java text-red-600 text-xl"></i>
+                                <span class="text-xs font-medium">Java</span>
+                                </div>
+
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-solid fa-database text-sky-400 text-xl"></i>
+                                <span class="text-xs font-medium">MySQL</span>
+                                </div>
+
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-solid fa-leaf text-green-500 text-xl"></i>
+                                <span class="text-xs font-medium">MongoDB</span>
+                                </div>
+
+
+                                <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="bx bxl-tailwind-css text-sky-400 text-2xl"></i>
+                                <span class="text-xs font-medium">Tailwind</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools and Workflow section -->
+                    <div class="card p-8 fade-in-element" style="animation-delay: 0.25s;">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fas fa-gears"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">Tools & Workflow</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                        <!-- Github -->
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                            <i class="fa-brands fa-square-github text-white text-xl"></i>
+                            <span class="text-xs font-medium">Github</span>
+                            </div>
+
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <img src="Images/vscode-logo.png" alt="VS Code" class="w-6 h-6" />
+                            <span class="text-xs font-medium">VSCode</span>
+                            </div>
+
+                            <!-- Excel -->
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fas fa-file-excel text-green-500 text-xl"></i>
+                                <span class="text-xs font-medium">Excel</span>
+                            </div>
+
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fas fa-box-archive text-amber-600"></i>
+                                <span class="text-xs font-medium">XAMPP</span>
+                            </div>
+
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fa-brands fa-google text-yellow-400 text-xl"></i>
+                                <span class="text-xs font-medium">Google Workspace</span>
+                            </div>
+
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                                <i class="fas fa-file-word text-blue-600"></i>
+                                <span class="text-xs font-medium">Microsoft Office</span>
+                            </div>
+
+                            <div class="flex items-center space-x-2 tech-item bg-black px-4 py-2 rounded-xl min-w-max border">
+                            <i class="fa-solid fa-paper-plane text-orange-500 text-xl"></i>
+                            <span class="text-xs font-medium">Postman</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Soft Skills Card -->
+                    <div class="card p-8 fade-in-element" style="animation-delay: 0.3s;">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-comment"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">Soft Skills</h2>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-puzzle-piece text-sky-700"></i>
+                                Problem-Solving
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-user-tie text-sky-700"></i>
+                                Leadership
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-comments text-sky-700"></i>
+                                Communication
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-people-group text-sky-700"></i>
+                                Team Collaboration
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-clock text-sky-700"></i>
+                                Time Management
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-rotate text-sky-700"></i>
+                                Adaptability
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-brain text-sky-700"></i>
+                                Critical Thinking
+                            </span>
+
+                            <span class="skill-tag flex items-center gap-2 bg-black px-2 py-2 rounded-xl border border-gray-700 text-xs font-medium">
+                                <i class="fa-solid fa-graduation-cap text-sky-700"></i>
+                                Continuous Learner
+                            </span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column (3 cols) - Experience, Projects, My Journey -->
+                <div class="lg:col-span-3 space-y-6">
+                    <!-- Experience Card -->
+                    <div class="card p-6 fade-in-element" style="animation-delay: 0.15s;">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-arrow-up-right-dots"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">Experience</h2>
+                        </div>
+
+                        <div class="space-y-2">
+                            <div class="timeline-item fade-in-element" style="animation-delay: 0.2s;">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-line"></div>
+                                <div class="mb-3">
+                                    <p class="text-xs text-gray-500 font-medium">March, 2025 - June, 2025</p>
+                                    <h3 class="font-semibold text-white text-lg">Back-end Developer Intern</h3>
+                                    <p class="text-sm text-gray-300 mb-2">SMESoft Inc.</p>
+                                    <p class="text-sm text-gray-400">During my internship at SMESoft Inc., I contributed to developing and optimizing key system functionalities to enhance performance, security, and user experience.
+                                         As one of the lead contributors to front-end development, I translated Figma UI designs into responsive and user-friendly web interfaces, ensuring seamless integration with back-end components. 
+                                         Working in an Agile-like environment,
+                                         I also supported database integration, system architecture design, and testing to help deliver high-quality system features and improvements efficiently.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Projects Card -->
+                    <div class="card p-8 fade-in-element" style="animation-delay: 0.2s;" id="projects">
+                        <div class="flex items-center justify-between mb-8">
+                            <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                                <h2 class="text-lg font-semibold">Recent Projects</h2>
+                            </div>
+                            <!-- View All button always visible, styled as improved button -->
+                            <button id="viewAllBtn" class="view-all-btn">
+                                View All
+                                <span>→</span>
+                            </button>
+                        </div>
+
+                        <!-- Projects grid - shows 4 projects in responsive layout -->
+                        <div class="projects-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <!-- Project 1 -->
+                            <a href="https://daylyst-app.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            class="project-card card p-6 hover:scale-105 transition fade-in-element cursor-pointer block" data-project-id="1" aria-label="Open To-Do List project">
+                            <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                                <img src="Images/to-do-list.png" alt="Project preview" class="w-full h-full object-cover">
+                            </div>
+                            <h3 class="font-semibold text-white mb-2">To-Do List</h3>
+                            <p class="text-xs text-gray-400">A simple to-do list app with a built-in Pomodoro timer to boost focus and productivity.</p>
+                            </a>
+
+                            <!-- Project 2 -->
+                            <a href="https://joaqs-weather-app.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            class="project-card card p-6 hover:scale-105 transition fade-in-element cursor-pointer" style="animation-delay: 0.3s;" data-project-id="2">
+                            <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                            <img src="Images/weather-app.png" alt="Project preview" class="w-full h-full object-cover">
+                            </div>
+                                <h3 class="font-semibold text-white mb-2">Weather App</h3>
+                                <p class="text-xs text-gray-400">A clean and reliable weather app that gives you real-time forecasts at a glance.</p>
+                            </a>
+
+                            <a href="https://workout-exercise-app.netlify.app/" target="_blank" rel="noopener noreferrer"
+                            class="project-card card p-6 hover:scale-105 transition fade-in-element cursor-pointer" style="animation-delay: 0.3s;" data-project-id="2">
+                            <div class="h-40 mb-4 rounded-lg overflow-hidden">
+                            <img src="Images/workout-app.png" alt="Project preview" class="w-full h-full object-cover">
+                            </div>
+                                <h3 class="font-semibold text-white mb-2">Workout App</h3>
+                                <p class="text-xs text-gray-400">A workout app that helps you stay fit with guided exercises and progress tracking.</p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- My Journey Card - Moved to right column -->
+                    <div class="card p-7 fade-in-element" style="animation-delay: 0.35s;">
+                        <div class="flex items-center gap-3 mb-8">
+                            <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                                 <i class="fa-solid fa-rocket"></i>
+                            </div>
+                            <h2 class="text-lg font-semibold">Journey</h2>
+                        </div>
+
+                        <div class="grid grid-cols-1 gap-2">
+                            <div class="fade-in-element" style="animation-delay: 0.4s;">
+                                <p class="text-white mb-3 text-sm">
+                                    My journey in technology began with a passion for problem-solving and creating digital solutions that make a difference.
+                                     Through my studies in Information Technology and various hands-on projects, I developed a strong foundation in building
+                                      efficient and user-centered applications. My internship experience as a Back-End Developer allowed me to strengthen my
+                                       skills across both front-end and back-end development, while collaborating in Agile teams and contributing to real-world system improvements.
+                                        I am eager to continue growing in the IT field and am open to opportunities in any role where I can leverage my skills, learn new technologies,
+                                         and contribute to building meaningful and impactful digital solutions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card p-10 fade-in-element rounded-lg"
+                        style="background-color: #000000; background-image: linear-gradient(315deg, #000000 0%, #1e1e1e 74%); animation-delay: 0.35s;">
+                    <div class="flex items-center gap-3 justify-center">
+                    <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                    <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <!-- Contact section in capsule design (footer-like but in main content) -->
+            <div class="card p-8 fade-in-element mb-20" style="animation-delay: 0.4s;">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    <!-- Email -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-2">Email</h3>
+                            <a href="mailto:joaquinmacol@gmail.com" class="text-sm text-gray-400 hover:text-blue-400 transition">
+                                joaquinmacol@gmail.com
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Phone -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-2">Phone</h3>
+                            <a href="tel:+1234567890" class="text-sm text-gray-400 hover:text-blue-400 transition">
+                                0906 272 1287
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Social -->
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 bg-black rounded-lg flex items-center justify-center">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-white mb-2">Connect</h3>
+                            <div class="space-y-1">
+                                <a href="https://github.com/joaqxx" target="_blank" class="text-sm text-gray-400 hover:text-blue-400 transition block">
+                                    GitHub
+                                </a>
+                                <a href="https://www.linkedin.com/in/joaquin-sebastian-macol-684306322/" target="_blank" class="text-sm text-gray-400 hover:text-blue-400 transition block">
+                                    LinkedIn
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer section -->
+    <footer id="footer-section" class="border-t border-gray-900 py-6 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center">
+                <p class="text-sm text-gray-600">Joaquin</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeModal">&times;</span>
+            <h2 class="text-2xl font-semibold mb-6">Get In Touch</h2>
+            <div class="space-y-4">
+                <div class="flex items-center gap-3 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition cursor-pointer" onclick="window.location.href='mailto:hello@example.com';">
+                    <span class="text-blue-400 text-lg">✉</span>
+                    <div>
+                        <p class="text-sm font-semibold">Email</p>
+                        <p class="text-xs text-gray-400">hello@example.com</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition cursor-pointer" onclick="window.location.href='tel:+1234567890';">
+                    <span class="text-blue-400 text-lg">📱</span>
+                    <div>
+                        <p class="text-sm font-semibold">Phone</p>
+                        <p class="text-xs text-gray-400">+1 (234) 567-890</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Modal - Fixed width issue, better container sizing -->
+    <div id="projectsModal" class="modal">
+        <div class="modal-content" style="max-width: 900px; width: 95%;">
+            <span class="modal-close" id="closeProjectsModal">&times;</span>
+            <h2 class="text-2xl font-semibold mb-6">All Projects</h2>
+            <!-- Scrollable projects grid with proper width handling -->
+            <div class="projects-modal-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-h-[60vh] overflow-y-auto pr-2">
+                <!-- Project 1 -->
+                <div class="card p-6 transition cursor-pointer" data-project-id="1">
+                    <div class="project-placeholder h-40 mb-4"></div>
+                    <h3 class="font-semibold text-white mb-2">Design System</h3>
+                    <p class="text-xs text-gray-400">Scalable component library for 50+ products</p>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="card p-6 transition cursor-pointer" data-project-id="2">
+                    <div class="project-placeholder h-40 mb-4"></div>
+                    <h3 class="font-semibold text-white mb-2">Analytics Platform</h3>
+                    <p class="text-xs text-gray-400">Real-time data visualization dashboard</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="server.js"> </script>
+</body>
+</html>
