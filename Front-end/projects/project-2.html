@@ -1,97 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Project 2 — Weather App Analytics</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="../style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Insights & Marketing Strategy Dashboard</title>
+    <!-- FontAwesome CDN for icons -->
+    <link rel="icon" type="image/png" href="/Front-end/images/web-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
-<body class="text-gray-900 bg-white">
-  <div class="max-w-4xl mx-auto p-6 md:p-8">
-    <a href="../index.html" class="inline-flex items-center gap-2 text-sm font-medium text-gray-600 hover:text-gray-900 transition mb-8">
-      <i class="fa-solid fa-arrow-left text-xs"></i>
-      <span>Back to Portfolio</span>
-    </a>
-    
-    <header class="mb-12">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Weather App Analytics</h1>
-      <p class="text-gray-600 text-base">API-driven forecasts · JavaScript · UX metrics</p>
-    </header>
+<body>
+    <!-- Hero Section -->
+    <div class="container">
+            <div class="navbar-content">
+              <a href="/Front-end/index.html">
+              <button class="back-btn" onclick="if (history.length > 1) { history.back(); } else { window.location.href='index.html'; }">
+                  <i class="fas fa-arrow-left"></i>
+                  <span>Back</span>
+              </button>
+              </a>
 
-    <section class="mb-14">
-      <h2 class="text-xl font-semibold text-gray-900 mb-5">Business Problem</h2>
-      <div class="p-7 bg-gray-50 border border-gray-200 rounded-lg">
-        <p class="text-gray-700 leading-relaxed">Understand which forecast features users rely on to prioritize improvements and increase retention.</p>
-      </div>
-    </section>
-
-    <section class="mb-14">
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">Business Questions</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg">
-          <p class="text-gray-700 text-sm leading-relaxed">Which forecast card has the highest engagement?</p>
+            </div>
+        <div class="hero">
+            <h1>Customer Insights & Marketing Strategy Dashboard</h1>
+            <p class="hero-subtitle">Developed a dynamic Excel Business Intelligence dashboard that unified fragmented sales data to track revenue trends, highlight the Top 5 customers, and analyze product market share for strategic decisions.</p>
+            <div class="tags">
+                <span class="tag"><i class="fas fa-broom"></i> Data Cleaning</span>
+                <span class="tag"><i class="fas fa-magnifying-glass"></i> XLOOKUP</span>
+                <span class="tag"><i class="fas fa-code-branch"></i> INDEX-MATCH</span>
+                <span class="tag"><i class="fas fa-file-excel text-green-500 text-xl"></i> Excel</span>
+                <span class="tag"><i class="fas fa-server"></i> 1000+ Rows</span>
+            </div>
         </div>
-        <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg">
-          <p class="text-gray-700 text-sm leading-relaxed">Does push notification timing improve retention?</p>
+
+        <!-- Business Scenario & Project Scope Section -->
+        <!-- Removed Key Requirements, moved section header inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <h2>Business Scenario</h2>
+                <p>The coffee chain's executive team required a consolidated, real-time view of sales performance. Data was isolated across separate tables (Orders, Customers, Products), preventing unified analysis of revenue trends, customer value, and product success.</p>
+                <h3>Project Scope</h3>
+                <ul>
+                  <li>Data Quality: Assessing and cleaning a raw dataset of 1,000 customer records.</li>
+                  <li>Data Transformation: Engineering new features (Age Brackets) to enable categorical analysis.</li>
+                  <li>Visualization: Designing a dynamic, single-page dashboard with 7 interactive charts.</li>
+                  <li>Strategy: Deriving concrete marketing recommendations based on conversion rate analysis.</li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section class="mb-14">
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">Process / Workflow</h3>
-      <ol class="space-y-3 list-decimal list-inside text-sm text-gray-700">
-        <li><span class="font-medium">Data Collection</span> — API metrics and user events.</li>
-        <li><span class="font-medium">Data Cleaning</span> — Filtered bots and test events.</li>
-        <li><span class="font-medium">Analysis</span> — Event funnels and feature usage.</li>
-        <li><span class="font-medium">Dashboard</span> — Interactive time-series and maps.</li>
-      </ol>
-    </section>
+        <!-- Key Business Questions - Inside cards-grid with section header and toggle arrows -->
+        <div class="cards-grid">
+            <div class="card-section-header1">Key Business Questions</div>
+            
+            <div class="questions-grid">
+                <div class="question-item active">
+                    <div class="question-header" onclick="toggleQuestion(this)">
+                        <div class="question-icon">📊</div>
+                        <div class="question-text">
+                            <div class="question-title">Who is our ideal customer?</div>
+                            <div class="question-hint">(Click to reveal answer)</div>
+                        </div>
+                        <!-- Added arrow toggle button with animation -->
+                        <div class="question-toggle"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="question-answer">
+                        Middle-aged professionals earning roughly $60k+ annually.
+                    </div>
+                </div>
 
-    <section class="mb-14">
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">Technical Skills & Tools</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded text-sm font-medium text-gray-700">JavaScript</span>
-        <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded text-sm font-medium text-gray-700">APIs</span>
-        <span class="px-4 py-2 bg-gray-100 border border-gray-300 rounded text-sm font-medium text-gray-700">D3 / Charting</span>
-      </div>
-    </section>
+                <div class="question-item">
+                    <div class="question-header" onclick="toggleQuestion(this)">
+                        <div class="question-icon">🏭</div>
+                        <div class="question-text">
+                            <div class="question-title">Where should we focus our ad spend?</div>
+                            <div class="question-hint">(Click to reveal answer)</div>
+                        </div>
+                        <!-- Added arrow toggle button with animation -->
+                        <div class="question-toggle"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="question-answer">
+                        The Pacific region, which demonstrates the highest purchase probability among all regions.
+                    </div>
+                </div>
 
-    <section class="mb-14">
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">What I Did</h3>
-      <p class="text-gray-700 leading-relaxed">Instrumented events, computed engagement metrics, and designed interactive visualizations to show feature impact.</p>
-    </section>
-
-    <section class="mb-14">
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">Final Dashboard</h3>
-      <div class="w-full bg-gradient-to-b from-gray-100 to-gray-50 rounded-lg border border-gray-200 overflow-hidden">
-        <div class="aspect-video flex items-center justify-center p-8">
-          <div class="text-center">
-            <i class="fa-solid fa-image text-gray-300 text-4xl mb-3"></i>
-            <p class="text-gray-400 text-sm">[Dashboard screenshot placeholder]</p>
-          </div>
+                <div class="question-item">
+                    <div class="question-header" onclick="toggleQuestion(this)">
+                        <div class="question-icon">🎯</div>
+                        <div class="question-text">
+                            <div class="question-title">What lifestyle factors correlate with sales?</div>
+                            <div class="question-hint">(Click to reveal answer)</div>
+                        </div>
+                        <!-- Added arrow toggle button with animation -->
+                        <div class="question-toggle"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="question-answer">
+                       Short commute distances (0–1 miles) and owning fewer than 2 cars are the strongest indicators of purchase intent.
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <section class="mb-14">
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">Key Results</h3>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg">
-          <h4 class="font-semibold text-gray-900">↑ 8% Engagement</h4>
-          <p class="text-sm text-gray-600 mt-2">Engagement improved after reordering forecast cards.</p>
-        </div>
-        <div class="p-6 bg-gray-50 border border-gray-200 rounded-lg">
-          <h4 class="font-semibold text-gray-900">Top Feature</h4>
-          <p class="text-sm text-gray-600 mt-2">Hourly forecast taps increased 20%.</p>
-        </div>
-      </div>
-    </section>
+        <!-- Methodology & Technical Implementation Section -->
+        <!-- Moved section header inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Methodology & Technical Implementation</div>
+                <p><strong>Data Cleaning</strong></p>
+                <ul>
+                  <li>De-duplication: Identified and removed 26 duplicate records to ensure accurate customer counting.</li>
+                  <li>Standardization: "Find & Replace" functionality was used to normalize inconsistent data entries (e.g., standardizing "M/F" to "Male/Female" and "S/M" to "Single/Married") for cleaner visualization labels.</li>
+                  <li>Currency Formatting: Income columns were adjusted to a zero-decimal currency format for improved readability across all reporting sheets.</li>
+                </ul>
+                <p><strong>Data Modeling</strong></p>
+                <ul>
+                  <li>Age Bracketing: A nested IF statement formula was developed to categorize numeric ages into strategic groups ("Adolescent," "Middle Age," "Old"). This modeling step was essential for enabling trend analysis across generational cohorts rather than individual ages.</li>
+                  <li>Pivot Table Architecture: A total of 7 distinct Pivot Tables were built to drive the interactive dashboard. Crucially, for the Occupation and Region analysis, the "Show Values As % of Row Total" feature was utilized. This was a strategic decision to calculate Conversion Rate (efficiency) rather than just raw volume, providing a more accurate metric for marketing ROI.</li>
 
-    <section>
-      <h3 class="text-xl font-semibold text-gray-900 mb-5">What I Learned</h3>
-      <p class="text-gray-700 leading-relaxed">Gained experience with event instrumentation and lightweight analytics to drive product decisions.</p>
-    </section>
-  </div>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Dashboard Section -->
+        <!-- Moved dashboard after Methodology -->
+        <div class="dashboard-preview">
+            <h2>Dashboard Preview</h2>
+            <div class="laptop-screen">
+                <img src="/placeholder.svg?height=600&width=1000" alt="Sales Dashboard">
+            </div>
+        </div>
+
+        <!-- Tools & Technologies Section -->
+        <!-- Redesigned tools grid: concise labels + capability badges (Excel shows specific features) -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Tools & Technologies</div>
+                <div class="tools-grid">
+                    <div class="tool-item tool-excel">
+                        <i class="fas fa-table tool-icon" aria-hidden="true"></i>
+                        <div>
+                            <div class="tool-name">Excel</div>
+                            <div class="tool-desc">Advanced modeling & dashboards</div>
+                        </div>
+                        <div class="tool-badges">
+                            <span class="tool-badge">Pivot Tables</span>
+                            <span class="tool-badge">XLOOKUP / INDEX</span>
+                            <span class="tool-badge">Dashboards</span>
+                            <span class="tool-badge">Charts</span>
+                            <span class="tool-badge">Slicers</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Insights & Recommendations Section -->
+        <!-- Moved section header inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Key Insights & Recommendations</div>
+                <div class="insights-grid">
+                    <div class="insight-box">
+                        <div class="insight-label">Finding #1</div>
+                        <div class="insight-value">Overall Performance</div>
+                        <div class="insight-text">The dataset reveals an overall conversion rate of roughly 48%, indicating a relatively balanced split between buyers and non-buyers, but with specific segments performing significantly better.</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-label">Finding #2</div>
+                        <div class="insight-value">Occupation Impact</div>
+                        <div class="insight-text">"Professionals" have the highest likelihood of purchasing a bike (~54% conversion rate), whereas "Manual" and "Clerical" roles purchase at rates below 50%.</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-label">Finding #3</div>
+                        <div class="insight-value">Utility & Transportation Drivers</div>
+                        <div class="insight-text">Customers exhibit a high propensity to buy when a bike serves a utility purpose. This is evidenced by a strong negative correlation between car ownership and bike purchase, as well as the fact that the most frequent buyers commute 0–1 Miles. This suggests the bikes are being used for short-distance transport rather than primarily for recreation.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recommendations Section -->
+        <!-- Section header moved inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Recommendations</div>
+                <ul>
+                    <li>Shift a larger percentage of the digital ad budget to the Pacific Region to capitalize on the higher conversion efficiency found there.</li>
+                    <li>Exclude households with 2+ cars from primary targeting to reduce wasted ad spend.</li>
+                    <li>Tailor marketing imagery to feature Middle-Aged Professionals using bikes for short commutes, mirroring the lifestyle of the highest-converting user base.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleQuestion(header) {
+            const item = header.closest('.question-item');
+            
+            // Close other open questions
+            document.querySelectorAll('.question-item.active').forEach(q => {
+                if (q !== item) {
+                    q.classList.remove('active');
+                }
+            });
+            
+            // Toggle current question
+            item.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

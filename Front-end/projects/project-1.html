@@ -1,253 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Project 1 — To-Do List Dashboard</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="project.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Sales & Customer Performance Analysis for a Global Coffee Chain</title>
+    <!-- FontAwesome CDN for icons -->
+    <link rel="icon" type="image/png" href="/Front-end/images/web-logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="project.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
 </head>
-<body class="text-white bg-black" id="app">
-  <div class="max-w-7xl mx-auto p-6 md:p-8">
-    <!-- Back Button with improved design -->
-<a href="../index.html" class="back-btn inline-flex items-center gap-2 px-4 py-2 border border-gray-300 rounded-xl text-sm font-medium text-gray-700 bg-white hover:bg-gray-100 hover:border-gray-400 hover:text-gray-900 shadow-sm transition-all mb-8">
-  <i class="fa-solid fa-arrow-left text-xs"></i>
-  <span>Back to Portfolio</span>
-</a>
+<body>
+    <!-- Hero Section -->
+    <div class="container">
+            <div class="navbar-content">
+              <a href="/Front-end/index.html">
+              <button class="back-btn" onclick="if (history.length > 1) { history.back(); } else { window.location.href='index.html'; }">
+                  <i class="fas fa-arrow-left"></i>
+                  <span>Back</span>
+              </button>
+              </a>
 
+            </div>
+        <div class="hero">
+            <h1>Coffee Chain Revenue Optimization and Product Performance Tracker</h1>
+            <p class="hero-subtitle">Developed an end-to-end Excel BI solution transforming fragmented transactional records into actionable insights on revenue trends and product performance. The dashboard identifies key revenue drivers and high-yield product categories to guide inventory and retention strategies.</p>
+            <div class="tags">
+                <span class="tag"><i class="fas fa-broom"></i> Data Cleaning</span>
+                <span class="tag"><i class="fas fa-magnifying-glass"></i> XLOOKUP</span>
+                <span class="tag"><i class="fas fa-code-branch"></i> INDEX-MATCH</span>
+                <span class="tag"><i class="fas fa-file-excel text-green-500 text-xl"></i> Excel</span>
+                <span class="tag"><i class="fas fa-server"></i> 1000+ Rows</span>
+            </div>
+        </div>
 
-    <!-- Header Section -->
-    <header class="mb-12">
-      <div class="flex items-start gap-4 mb-6">
-        <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
-          <i class="fa-solid fa-chart-line text-black text-lg"></i>
+        <!-- Business Scenario & Project Scope Section -->
+        <!-- Removed Key Requirements, moved section header inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <h2>Business Scenario</h2>
+                <p>The coffee chain's managers had a lot of sales data, but they couldn't find simple answers. The key information was stuck in three separate files, making it hard to see the big picture. Managers had to spend too much time manually checking data just to answer basic questions about sales growth or their best customers. They needed one clear, automatic tool to quickly check how the business was doing.</p>
+                <h3>Project Scope</h3>
+                <p>The project required building a scalable data architecture to handle data from 2019 to 2022. Key deliverables included</p>
+                <ul>
+                    <li>Merged three distinct tables into a master dataset to consolidate fragmented records.</li>
+                    <li>Created a user-friendly interface with dynamic filtering using Slicers and Timelines for granular analysis.</li>
+                    <li>The report was changed to focus on finding the most important customers rather than just showing sales by country. This strategic focus helps the company plan its new customer rewards program.</li>
+                </ul>
+            </div>
         </div>
-        <div>
-          <h1 class="text-4xl md:text-5xl font-bold text-white">To-Do List Dashboard</h1>
-          <p class="text-gray-500 mt-3 text-base">Personal productivity dataset · Excel / JavaScript · Interactive Dashboard</p>
-        </div>
-      </div>
-      <div class="accent-line mt-8"></div>
-    </header>
 
-    <!-- Overview Stats -->
-    <section class="mb-12">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="card p-5 rounded-lg">
-          <p class="text-xs font-medium uppercase tracking-wide">Duration</p>
-          <p class="text-2xl font-semibold mt-3">3 weeks</p>
-        </div>
-        <div class="card p-5 rounded-lg">
-          <p class="text-xs font-medium uppercase tracking-wide">Data Points</p>
-          <p class="text-2xl font-semibold mt-3">2,500+</p>
-        </div>
-        <div class="card p-5 rounded-lg">
-          <p class="text-xs font-medium uppercase tracking-wide">Tools Used</p>
-          <div class="flex gap-2 mt-3">
-            <span class="w-7 h-7 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">E</span>
-            <span class="w-7 h-7 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">Q</span>
-            <span class="w-7 h-7 bg-gray-300 rounded flex items-center justify-center text-xs font-bold">J</span>
-          </div>
-        </div>
-        <div class="card p-5 rounded-lg">
-          <p class="text-xs font-medium uppercase tracking-wide">Dataset Size</p>
-          <p class="text-2xl font-semibold mt-3">12 months</p>
-        </div>
-      </div>
-    </section>
+        <!-- Key Business Questions - Inside cards-grid with section header and toggle arrows -->
+        <div class="cards-grid">
+            <div class="card-section-header1">Key Business Questions</div>
+            
+            <div class="questions-grid">
+                <div class="question-item active">
+                    <div class="question-header" onclick="toggleQuestion(this)">
+                        <div class="question-icon">📊</div>
+                        <div class="question-text">
+                            <div class="question-title">How is the business trending year-over-year?</div>
+                            <div class="question-hint">(Click to reveal answer)</div>
+                        </div>
+                        <!-- Added arrow toggle button with animation -->
+                        <div class="question-toggle"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="question-answer">
+                       Revenue peaked in 2021 but showed a concerning decline in early 2022 which signals an immediate need for sales intervention.
+                    </div>
+                </div>
 
-    <!-- Business Problem Section with design -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Business Problem</h2>
-      </div>
-      <div class="card p-7 rounded-lg">
-        <div class="flex gap-1 mb-4">
-          <div class="w-1 h-4 bg-white rounded-full"></div>
-        </div>
-        <p class="leading-relaxed text-base">Managers needed a concise view of user tasks and focus habits to improve productivity coaching and feature prioritization. Without visibility into task completion patterns and time allocation, decision-makers couldn't identify optimization opportunities.</p>
-      </div>
-    </section>
+                <div class="question-item">
+                    <div class="question-header" onclick="toggleQuestion(this)">
+                        <div class="question-icon">🏭</div>
+                        <div class="question-text">
+                            <div class="question-title">Which product is our cash cow?</div>
+                            <div class="question-hint">(Click to reveal answer)</div>
+                        </div>
+                        <!-- Added arrow toggle button with animation -->
+                        <div class="question-toggle"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="question-answer">
+                        Arabica beans are the undisputed leader and command over 35% of total market share which validates it as the priority for inventory stability.
+                    </div>
+                </div>
 
-    <!-- Key Questions Section with design -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Key Questions</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="card p-6 rounded-lg">
-          <div class="flex items-center mb-3">
-            <span class="question-number">1</span>
-          </div>
-          <p class="text-white font-medium text-sm leading-relaxed">Which tasks take the longest on average?</p>
+                <div class="question-item">
+                    <div class="question-header" onclick="toggleQuestion(this)">
+                        <div class="question-icon">🎯</div>
+                        <div class="question-text">
+                            <div class="question-title">Who should we target to make sure they keep buying from us?</div>
+                            <div class="question-hint">(Click to reveal answer)</div>
+                        </div>
+                        <!-- Added arrow toggle button with animation -->
+                        <div class="question-toggle"><i class="fa-solid fa-arrow-down"></i></div>
+                    </div>
+                    <div class="question-answer">
+                        The top 5 customers spend the most money, which makes them key people to reward with a VIP loyalty plan.
+                </div>
+            </div>
         </div>
-        <div class="card p-6 rounded-lg">
-          <div class="flex items-center mb-3">
-            <span class="question-number">2</span>
-          </div>
-          <p class="text-white font-medium text-sm leading-relaxed">How does completion rate vary by weekday?</p>
-        </div>
-        <div class="card p-6 rounded-lg">
-          <div class="flex items-center mb-3">
-            <span class="question-number">3</span>
-          </div>
-          <p class="text-white font-medium text-sm leading-relaxed">Which features drive the most repeat usage?</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Key Questions Answered -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Analysis & Findings</h2>
-      </div>
-      <div class="space-y-4">
-        <div class="card p-6 rounded-lg answer-highlight">
-          <p class="text-xs text-white font-medium mb-2">FINDING 1</p>
-          <p class="text-white text-sm leading-relaxed"><span class="font-semibold">Task Duration Distribution:</span> Email tasks average 28 minutes, followed by meetings (22 min) and admin work (18 min). Top 10 tasks represent 60% of total time spent.</p>
+        <!-- Methodology & Technical Implementation Section -->
+        <!-- Moved section header inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Methodology & Technical Implementation</div>
+                <p><strong>Data Cleaning and Preparation</strong></p>
+                <ul>
+                  <li>Utilized Excel's built-in Check and duplicate removal features to ensure initial data integrity and clean the three source tables (orders, customers, products).</li>
+                  <li>Applied consistent formatting to date and currency fields to prevent calculation errors and ensure visual consistency across the dashboard</li>
+                  <li>The initial three source tables were cleaned and prepared before being joined, establishing a clean foundation for the subsequent data modeling step.</li>
+                </ul>
+                <p><strong>Data Modeling</strong></p>
+                <ul>
+                  <li>Successfully utilized XLOOKUP and INDEX MATCH formulas to link the three initial source tables (orders, customers, and products) into a single Master Data Table.</li>
+                  <li>This modeled data serves as the single source of truth and the foundation for all subsequent Pivot Tables and dynamic visualizations.</li>
+                  <li>Developed custom calculated fields for Sales Revenue using arithmetic logic to power all downstream financial KPIs</li>
+                  <li>Applied Multiple IF logic for specific data categorization (for example, confirming Loyalty Card status or grouping product attributes), enabling granular analysis.</li>
+                </ul>
+            </div>
         </div>
-        <div class="card p-6 rounded-lg answer-highlight">
-          <p class="text-xs text-white font-medium mb-2">FINDING 2</p>
-          <p class="text-white text-sm leading-relaxed"><span class="font-semibold">Weekly Patterns:</span> Completion rates peak Tuesday-Thursday (72%) and drop significantly on Mondays (45%) and Fridays (52%). Weekend completion falls to 28%.</p>
-        </div>
-        <div class="card p-6 rounded-lg answer-highlight">
-          <p class="text-xs text-white font-medium mb-2">FINDING 3</p>
-          <p class="text-white text-sm leading-relaxed"><span class="font-semibold">Feature Usage:</span> Recurring tasks have 3.2x higher engagement. Push notifications boost completion by ±28%. Users most active between 6-9 PM.</p>
-        </div>
-      </div>
-    </section>
 
-    <!-- Methodology Section -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Approach & Methodology</h2>
-      </div>
-      <div class="space-y-3">
-        <div class="flex gap-4 card p-5 rounded-lg">
-          <div class="flex-shrink-0 w-8 h-8 bg-gray-800 text-white rounded-full flex items-center justify-center text-xs font-semibold">1</div>
-          <div>
-            <p class="font-medium text-sm text-white">Data Collection</p>
-            <p class="text-xs text-white mt-1">Exported user activity logs and comprehensive task metadata from the database.</p>
-          </div>
+        <!-- Dashboard Section -->
+        <!-- Moved dashboard after Methodology -->
+        <div class="dashboard-preview">
+            <h2>Dashboard Preview</h2>
+            <div class="laptop-screen">
+                <img src="/placeholder.svg?height=600&width=1000" alt="Sales Dashboard">
+            </div>
         </div>
-        <div class="flex gap-4 card p-5 rounded-lg">
-          <div class="flex-shrink-0 w-8 h-8 bg-gray-800 text-white rounded-full flex items-center justify-center text-xs font-semibold">2</div>
-          <div>
-            <p class="font-medium text-sm text-white">Data Cleaning & Preparation</p>
-            <p class="text-xs text-white mt-1">Removed duplicates, standardized timestamps, and handled missing values using Power Query.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 card p-5 rounded-lg">
-          <div class="flex-shrink-0 w-8 h-8 bg-gray-800 text-white rounded-full flex items-center justify-center text-xs font-semibold">3</div>
-          <div>
-            <p class="font-medium text-sm text-white">Analysis & KPI Calculation</p>
-            <p class="text-xs text-white mt-1">Used PivotTables to calculate average time, completion rates, and user engagement metrics.</p>
-          </div>
-        </div>
-        <div class="flex gap-4 card p-5 rounded-lg">
-          <div class="flex-shrink-0 w-8 h-8 bg-gray-800 text-white rounded-full flex items-center justify-center text-xs font-semibold">4</div>
-          <div>
-            <p class="font-medium text-sm text-white">Dashboard Development</p>
-            <p class="text-xs text-white mt-1">Built interactive visualizations with filters and drill-down capabilities for stakeholder insights.</p>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Technical Skills -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Technical Skills & Tools</h2>
-      </div>
-      <div class="flex flex-wrap gap-2">
-        <span class="px-4 py-2 card rounded text-sm font-medium text-white">Excel</span>
-        <span class="px-4 py-2 card rounded text-sm font-medium text-white">PivotTables</span>
-        <span class="px-4 py-2 card rounded text-sm font-medium text-white">Power Query</span>
-        <span class="px-4 py-2 card rounded text-sm font-medium text-white">Data Visualization</span>
-        <span class="px-4 py-2 card rounded text-sm font-medium text-white">JavaScript</span>
-      </div>
-    </section>
+        <!-- Tools & Technologies Section -->
+        <!-- Redesigned tools grid: concise labels + capability badges (Excel shows specific features) -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Tools & Technologies</div>
+                <div class="tools-grid">
+                    <div class="tool-item tool-excel">
+                        <i class="fas fa-table tool-icon" aria-hidden="true"></i>
+                        <div>
+                            <div class="tool-name">Excel</div>
+                            <div class="tool-desc">Advanced modeling & dashboards</div>
+                        </div>
+                        <div class="tool-badges">
+                            <span class="tool-badge">Pivot Tables</span>
+                            <span class="tool-badge">XLOOKUP / INDEX</span>
+                            <span class="tool-badge">Dashboard</span>
+                            <span class="tool-badge">Charts</span>
+                            <span class="tool-badge">Timeline</span>
+                            <span class="tool-badge">Advanced Formula</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <!-- Dashboard Section -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Dashboard Preview</h2>
-      </div>
-      <div class="w-full bg-gradient-to-b from-gray-100 to-gray-50 rounded-lg border border-gray-200 overflow-hidden">
-        <div class="aspect-video flex items-center justify-center p-8">
-          <div class="text-center">
-            <i class="fa-solid fa-image text-gray-300 text-4xl mb-3"></i>
-            <p class="text-gray-400 text-sm">[Dashboard screenshot or interactive preview]</p>
-          </div>
+        <!-- Key Insights & Recommendations Section -->
+        <!-- Moved section header inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Key Insights & Recommendations</div>
+                <div class="insights-grid">
+                    <div class="insight-box">
+                        <div class="insight-label">Finding #1</div>
+                        <div class="insight-value">Growth Peak & Decline</div>
+                        <div class="insight-text">The Total Sales Trend peaked significantly in 2021 but showed an alarming dip in the first half of 2022, signaling a necessary intervention.</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-label">Finding #2</div>
+                        <div class="insight-value">Product Focus</div>
+                        <div class="insight-text">Arabica is the clear cash cow, accounting for over 35% of all sales, confirming where inventory and marketing resources should be allocated.</div>
+                    </div>
+                    <div class="insight-box">
+                        <div class="insight-label">Finding #3</div>
+                        <div class="insight-value">Customer Value</div>
+                        <div class="insight-text">A small cluster of VIP customers generates significant recurring revenue meaning that losing even one of the top 5 customers would have a measurable impact on monthly targets</div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Key Results Section -->
-    <section class="mb-14">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Impact & Results</h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="card p-6 rounded-lg">
-          <div class="flex items-baseline gap-2 mb-2">
-            <span class="text-3xl font-bold text-white">72%</span>
-            <span class="text-xs text-white">peak</span>
-          </div>
-          <p class="text-sm font-medium text-white mb-1">Peak Completion</p>
-          <p class="text-xs text-white">Tuesday-Thursday completion rates after optimization.</p>
+        <!-- Recommendations Section -->
+        <!-- Section header moved inside card -->
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-section-header">Recommendations</div>
+                <ul>
+                    <li>Implement a high-tier loyalty program targeting the Top 5 Customers (and others in that tier) to ensure retention and capitalize on high sales volume.</li>
+                    <li>Shift procurement budgets to secure Arabica supply chains to prevent stockouts on the highest revenue product</li>
+                    <li>Review the performance of low-volume bean types for potential discontinuation to free up shelf space and capital</li>
+                </ul>
+            </div>
         </div>
-        <div class="card p-6 rounded-lg">
-          <div class="flex items-baseline gap-2 mb-2">
-            <span class="text-3xl font-bold text-white">60%</span>
-            <span class="text-xs text-white">of time</span>
-          </div>
-          <p class="text-sm font-medium text-white mb-1">Top Tasks</p>
-          <p class="text-xs text-white">Top 10 tasks account for majority of user time.</p>
-        </div>
-        <div class="card p-6 rounded-lg">
-          <div class="flex items-baseline gap-2 mb-2">
-            <span class="text-3xl font-bold text-white">3.2x</span>
-            <span class="text-xs text-white">engagement</span>
-          </div>
-          <p class="text-sm font-medium text-white mb-1">Recurring Tasks</p>
-          <p class="text-xs text-white">Higher engagement with recurring task features.</p>
-        </div>
-      </div>
-    </section>
+    </div>
 
-    <!-- Learnings Section -->
-    <section class="mb-10">
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Key Learnings</h2>
-      </div>
-      <div class="space-y-3">
-        <div class="card p-5 rounded-lg">
-          <p class="text-sm text-white"><span class="font-semibold">Data Quality Matters</span> — Investing time in thorough data cleaning prevents cascading errors in analysis and insights.</p>
-        </div>
-        <div class="card p-5 rounded-lg">
-          <p class="text-sm text-white"><span class="font-semibold">Dashboard Storytelling</span> — Effective visualizations must guide stakeholders toward actionable insights, not just display data.</p>
-        </div>
-        <div class="card p-5 rounded-lg">
-          <p class="text-sm text-white"><span class="font-semibold">Business Context is Critical</span> — Understanding the "why" behind metrics enables more impactful recommendations and solutions.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Impact Section -->
-    <section>
-      <div class="mb-5">
-        <h2 class="text-xl font-semibold text-white">Impact & Next Steps</h2>
-      </div>
-      <div class="card p-7 rounded-lg">
-        <p class="text-sm text-white mb-4 leading-relaxed">This analysis provided managers with data-driven recommendations that improved feature prioritization and user engagement strategies. The dashboard continues to be used for weekly performance tracking.</p>
-        <div class="text-xs text-white space-y-2">
-          <p><span class="font-semibold">Future Enhancements:</span> Real-time data integration, predictive modeling for user churn, and automated anomaly detection.</p>
-        </div>
-      </div>
-    </section>
-
-  </div>
+    <script>
+        function toggleQuestion(header) {
+            const item = header.closest('.question-item');
+            
+            // Close other open questions
+            document.querySelectorAll('.question-item.active').forEach(q => {
+                if (q !== item) {
+                    q.classList.remove('active');
+                }
+            });
+            
+            // Toggle current question
+            item.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
