@@ -5,7 +5,7 @@
         }
 
         body {
-            background-color: #efefefe2;
+            background-color: #0a0a0af6;
             color: #ffffff;
             font-family: 'Inter', sans-serif;
         }
@@ -31,6 +31,16 @@
         transform: scale(1.05);
         transition: all 0.2s ease-in-out;
         border-color: white; /* Tailwind cyan-400 */
+        }
+
+        .card1 {
+            background-color: #909090;
+            opacity: 0.8;
+            background-image:  linear-gradient(#c9c9c9af 1px, transparent 1px), linear-gradient(to right, #eeeeee9e 1px, #eeeeeee5 1px);
+            background-size: 20px 20px;
+            border: 4px solid #000000;
+            border-radius: 1rem;
+            color: black;
         }
 
 
@@ -305,7 +315,7 @@
         .card {
             /* background: linear-gradient(135deg, rgba(17, 17, 17, 0.8) 0%, rgba(25, 25, 25, 0.9) 100%); */
             background-color: rgba(0, 0, 0, 0.911);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.309);
             border-radius: 12px;
             backdrop-filter: blur(10px);
         }
