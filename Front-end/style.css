@@ -34,11 +34,11 @@
         }
 
         .card1 {
-            background-color: #909090;
+            background-color: #000000;
             opacity: 0.8;
-            background-image:  linear-gradient(#c9c9c9af 1px, transparent 1px), linear-gradient(to right, #eeeeee9e 1px, #eeeeeee5 1px);
+            background-image:  linear-gradient(#21212134 1px, transparent 1px), linear-gradient(to right, #21212134 1px, #000000e5 1px);
             background-size: 20px 20px;
-            border: 4px solid #000000;
+            border: 0.5px solid #ffffffa4;
             border-radius: 1rem;
             color: black;
         }
@@ -299,6 +299,8 @@
             .top-bar-left {
                 width: 100%;
                 flex-direction: column;
+                display: flex;
+                align-items: center;
             }
 
             .top-bar-right {
