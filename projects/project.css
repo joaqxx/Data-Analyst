@@ -5,7 +5,7 @@
         }
 
         body {
-            background-color: #efefefe2;
+            background-color: #0a0a0af6;
             color: #ffffff;
             line-height: 1.6;
               font-family: "Poppins", sans-serif;
@@ -188,7 +188,7 @@
         .card-section-header1 {
             font-size: 22px;
             font-weight: 700;
-            color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
             text-transform: uppercase;
             letter-spacing: 1.5px;
             margin-top: 0;
@@ -203,7 +203,7 @@
             content: '';
             width: 3px;
             height: 36px;
-            background: #000000;
+            background: #fefefe;
             border-radius: 2px;
             opacity: 1;
         }
